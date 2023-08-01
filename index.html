@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bmi">
+    <h2>BMI Calculator</h2>
+    <div>
+      <input type="checkbox" id="nav" class="nav" />
+      <label for="nav" class="nav-icon">&#x2630</label>
+      <div class="about-bmi">
+        <h3>Definition</h3>
+        <p> BMI provides a fairly reliable indicator of body fatness for most people and is used to screen for weight
+          categories that may lead to health problems.</p>
+      </div>
+    </div>
+    <div class="getHeight">
+      <h3>HEIGHT(cm)</h3>
+      <input type="text" id="heightvalue">
+    </div>
+    <div class="getWeight">
+      <h4>WEIGHT(kg)</h4>
+      <label id="weight">50</label>
+      <div>
+        <button type="button" id="pluss" onclick="getWeight('add')">+</button>
+        <button type="button" id="minus" onclick="getWeight('dif')">-</button>
+      </div>
+    </div>
+    <input type="checkbox" id="click" class="click" />
+    <label for="click" class="clickshow" onclick="showResult()" id="showclick">CALCULATE YOUR BMI</label>
+    <div class="dup">
+      <div class="suggetionwindo" id="dupicate">
+        <div class="bmirange">
+          <label id="status">""</label><br>
+          <label id="range">18</label>
+        </div>
+        <div class="bmi-range">
+          <p>Suggest BMI range<br>18.5~24.0 kg/m2</p>
+        </div>
+        <div class="bmisugge">
+          <label id="suggetion">You have a normal body weight. Good job!</label>
+        </div>
+      </div>
+      <div class="error-box" id="errorbox">
+        <p>Sorry! Invalid input</p>
+        <button type="button" id="error" onclick="reload()">Back</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
